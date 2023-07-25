@@ -1,0 +1,295 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: #ffffff;
+}
+
+.logo img {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.nav-links {
+  flex: 1;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 42px;
+}
+
+.nav-links ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin-right: auto; /* Empuja los enlaces hacia la izquierda */
+}
+
+.nav-links li {
+  margin-right: 15px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #333;
+}
+
+.login-signup-mobile {
+  margin-left: 400px; /* Agrega un margen entre los enlaces y el login-signup-mobile */
+}
+
+.login-signup {
+  display: flex;
+  align-items: center;
+}
+
+.login-signup a {
+  text-decoration: none;
+  color: #333;
+  margin-right: 10px;
+}
+
+.signup-btn {
+  padding: 8px 15px;
+  background-color: #8634c7;
+  color: #ffffff !important;
+  text-decoration: none;
+  border-radius: 20px;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: 100vh;
+  padding-bottom: 40px;
+}
+
+.left-section {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centra los elementos horizontalmente dentro de left-section */
+  max-width: calc(50% - 40px);
+}
+
+.left-section h1 {
+  font-weight: bold;
+  margin-bottom: 10px;
+  margin-top: 0;
+}
+
+.left-section img {
+  max-width: 100%;
+  height: auto;
+  margin-bottom: 20px;
+}
+
+.right-section {
+  flex: 1;
+  padding: 20px;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form {
+  width: 100%;
+  max-width: 400px;
+  margin-top: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  padding: 8px;
+  margin-bottom: 10px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+.send-btn {
+  width: 100%;
+  padding: 12px;
+  background-color: #8634c7;
+  color: #ffffff !important;
+  text-decoration: none;
+  border-radius: 4px;
+  border: none;
+  display: block;
+  margin-top: 10px;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px; /* Añade un margen superior para separarlo del contenido superior */
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  max-width: 1000px;
+  width: 100%;
+}
+
+.footer-item {
+  text-align: center;
+  flex-basis: 45%;
+  margin-bottom: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-item h3 {
+  margin-bottom: 10px;
+}
+
+.footer-item p {
+  margin-bottom: 5px;
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 30px;
+  border-radius: 8px;
+  color: #fff;
+  font-size: 24px;
+  text-align: center;
+}
+
+.popup-content {
+  display: flex;
+  align-items: center;
+}
+
+.fa-envelope {
+  margin-right: 10px;
+}
+
+/* Estilos para dispositivos móviles y tabletas */
+@media (max-width: 991px) {
+  /* Mostrar menú hamburguesa y ocultar el nav-links */
+  .hamburger-menu {
+    display: flex; /* Mostramos el menú hamburguesa en dispositivos móviles */
+    cursor: pointer;
+  }
+
+  .nav-links {
+    display: none; /* Ocultar la lista de enlaces en dispositivos móviles */
+  }
+
+  /* Estilo para el menú hamburguesa (líneas) */
+
+  .hamburger-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 25px;
+    right: 20px;
+    font-size: 24px;
+    cursor: pointer;
+  }
+
+  .hamburger-menu .line-1,
+  .hamburger-menu .line-2,
+  .hamburger-menu .line-3 {
+    width: 25px;
+    height: 3px;
+    background-color: #333;
+    transition: all 0.3s ease;
+    margin: 3px 0px; /* Añadir margen de 3px arriba y abajo de cada línea */
+  }
+
+  /* Mostrar el nav-links cuando se hace clic en el menú hamburguesa */
+  .nav-links.active {
+    display: block; /* Mostramos la lista de enlaces en dispositivos móviles */
+    position: absolute;
+    top: 100px;
+    right: 0;
+    width: 100%;
+    background-color: #fff; /* Fondo blanco para la lista */
+    padding: 20px; /* Espacio entre los enlaces */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Sombra para darle profundidad */
+    z-index: 1; /* Asegurarse de que aparezca encima del resto de contenido */
+  }
+
+  .nav-links.active li {
+    margin-right: 0;
+    margin-bottom: 15px;
+    margin-left: 0px; /* vuelve toda la lista vertical del nav bar*/
+  }
+
+  /* Estilos para el menú hamburguesa activo */
+  .hamburger-menu.active .line-1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+
+  .hamburger-menu.active .line-2 {
+    opacity: 0;
+  }
+
+  .hamburger-menu.active .line-3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+
+  /* Ajustes para la sección izquierda y derecha en dispositivos móviles */
+  .container {
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 0;
+  }
+
+  .left-section,
+  .right-section {
+    padding: 20px;
+  }
+
+  .left-section img {
+    max-width: 100%;
+    margin-bottom: 10px;
+  }
+
+  /* Estilo para la lista de enlaces en el menú hamburguesa */
+  .nav-links.active ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .nav-links.active li {
+    margin-bottom: 15px;
+  }
+
+  .nav-links.active a {
+    text-decoration: none;
+    color: #333;
+  }
+}

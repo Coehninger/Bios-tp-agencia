@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Trabajo Bios</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+  </head>
+  <body>
+    <nav>
+      <div class="logo">
+        <img src="img/logo.svg" alt="Logo" />
+      </div>
+      <div class="nav-links">
+        <ul>
+          <li><a href="#">Pricing</a></li>
+          <li><a href="#">Resources</a></li>
+          <li><a href="#">Center</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Contact</a></li>
+          <li class="login-signup-mobile">
+            <a href="#" class="login">Login</a>
+            <a href="#" class="signup-btn">Sign Up</a>
+          </li>
+        </ul>
+      </div>
+      <div class="hamburger-menu">
+        <div class="line-1"></div>
+        <div class="line-2"></div>
+        <div class="line-3"></div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="left-section">
+        <h1>Talk to our product analytics expert</h1>
+        <p>
+          Have questions about pricing, plans, or Growthly? Fill out the form
+          and our product analytics expert will be in touch directly.
+        </p>
+        <h2>Our office</h2>
+        <div class="image-container">
+          <img src="img/gente trabajando.jpg" alt="Image" />
+        </div>
+        <div class="footer-container">
+          <div class="footer-content">
+            <div class="footer-item">
+              <h3>United Kingdom</h3>
+              <p class="fas fa-map-marker">
+                30 Eastbourne Terrace<br />
+                Paddington, London<br />
+                W2 6LA, UK
+              </p>
+              <p class="fas fa-phone">+44 13 5135 1051</p>
+            </div>
+            <div class="footer-item">
+              <h3>France</h3>
+              <p class="fas fa-map-marker">
+                266 Place Ernest Granier<br />
+                34000 Montpellier<br />
+                France
+              </p>
+              <p class="fas fa-phone">+3351218 21 86</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="right-section">
+        <form id="myForm">
+          <label for="fname">First Name</label>
+          <input type="text" id="fname" name="fname" required />
+
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="company">Company Name</label>
+          <input type="text" id="company" name="company" required />
+
+          <label for="phone">Phone Number</label>
+          <input type="tel" id="phone" name="phone" required />
+
+          <label for="country">Country</label>
+          <select id="country" name="country">
+            <option value="uruguay">Uruguay</option>
+            <option value="argentina">Argentina</option>
+            <option value="brasil">Brasil</option>
+            <option value="chile">Chile</option>
+            <option value="paraguay">Paraguay</option>
+            <option value="bolivia">Bolivia</option>
+            <option value="colombia">Colombia</option>
+            <option value="peru">Peru</option>
+            <option value="ecuador">Ecuador</option>
+            <option value="venezuela">Venezuela</option>
+            <option value="mexico">Mexico</option>
+          </select>
+
+          <label for="message">Message</label>
+          <textarea id="message" name="message" required></textarea>
+
+          <button type="submit" class="send-btn">Send</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="popup" id="popup">
+      <div class="popup-content">
+        <i class="fas fa-envelope"></i>
+        <p>Enviado</p>
+      </div>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
